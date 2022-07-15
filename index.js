@@ -7,6 +7,8 @@ const cors = require("cors");
 
 const PORT = process.env.PORT ||4000;
 
+const HOST = 'localhost';
+
 
 const app = express();
 
@@ -109,9 +111,9 @@ if(process.env.NODE_ENV == 'production'){
     });
 }
 
-app.listen(PORT,(error)=>{
+app.listen(PORT,HOST,(error)=>{
     if(!error){
-        console.log("server has been started on port 4000");
+        console.log("server has been started on port "+ PORT +  "and host is : "+HOST );
     }
     else{
         console.log("error is "+ error);
