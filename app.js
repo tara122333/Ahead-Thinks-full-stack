@@ -103,6 +103,10 @@ app.post("/signup",async(req,res)=>{
 
 if(process.env.NODE_ENV == 'production'){
     app.use(express.static("my-app/build"));
+    const path = require("path");
+    app.get("*",(req,res)=>{
+        res.sendFile(path.resolve(__dirname,'client','build','index.js'));
+    });
 }
 
 app.listen(PORT,(error)=>{
