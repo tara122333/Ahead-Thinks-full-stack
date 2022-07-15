@@ -27,7 +27,7 @@ const LoginPage = ()=>{
             userpasswordError:''
         })
         if(validForm()){
-            let url = `http://localhost:${process.env.PORT}/login`;
+            let url = `http://localhost:4000/login`;
             let options = {
                 method:'post',
                 url:url,
@@ -37,6 +37,7 @@ const LoginPage = ()=>{
                 data:inputField
             }
             try {
+                console.log("good");
                 let response = await axios(options);
                 console.log(response);
                 if(response.statusText === 'OK'){
