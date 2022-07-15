@@ -20,6 +20,7 @@ const LoginPage = ()=>{
     const inputHandeler = (e)=>{
         setInputFields({...inputField,[e.target.name]:e.target.value});
     }
+    const PORT = process.env.PORT || 4000;
 
     const submitbutton = async()=>{
         setErrorFields({
@@ -27,7 +28,7 @@ const LoginPage = ()=>{
             userpasswordError:''
         })
         if(validForm()){
-            let url = `http://localhost:4000/login`;
+            let url = `http://localhost:${PORT}/login`;
             let options = {
                 method:'post',
                 url:url,

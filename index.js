@@ -5,7 +5,7 @@ const bcrypt = require("bcryptjs");
 const cors = require("cors");
 
 
-const PORT = process.env.PORT ||4000;
+const PORT = process.env.PORT || 4000;
 
 const HOST = 'localhost';
 
