@@ -16,10 +16,10 @@ app.use(express.json());
 app.use(express.urlencoded({extended:false}));
 app.use(cors());
 
-app.get("/",(req,res)=>{
-    res.json({Message : "Success"});
+// app.get("/",(req,res)=>{
+//     res.json({Message : "Success"});
 
-});
+// });
 
 app.post("/login",async(req,res)=>{
     try {
