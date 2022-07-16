@@ -39,17 +39,17 @@ const RegistrationPage = ()=>{
         })
         if(validForm()){
 
-            // let url = `http://localhost:${PORT}/signup`;
-            // let options = {
-            //     method:'post',
-            //     url:url,
-            //     Headers:{
-            //     },
-            //     data:inputField
-            // }
+            let url = `http://localhost:${PORT}/signup`;
+            let options = {
+                method:'post',
+                url:url,
+                Headers:{
+                },
+                data:inputField
+            }
             try {
 
-                let response = await axios.post("https://fineskills.herokuapp.com/signup",inputField);
+                let response = await axios.post("http://localhost:4000/signup",inputField);
                 // let response = await axios(options);
                 console.log(response);
                 if(response.status === 201 || response.status === 200 ){
