@@ -39,7 +39,7 @@ const RegistrationPage = ()=>{
         })
         if(validForm()){
 
-            let url = `http://localhost:${PORT}/signup`;
+            let url = `https://fineskills.herokuapp.com/signup`;
             let options = {
                 method:'post',
                 url:url,
@@ -49,7 +49,7 @@ const RegistrationPage = ()=>{
             }
             try {
 
-                let response = await axios.post("http://localhost:4000/signup",inputField);
+                let response = await axios.post("https://fineskills.herokuapp.com/signup",inputField);
                 // let response = await axios(options);
                 console.log(response);
                 if(response.status === 201 || response.status === 200 ){
@@ -62,7 +62,7 @@ const RegistrationPage = ()=>{
             } catch (e) {
                 toast.error("user not added");
                 console.log(e);
-                // let response = await axios.post("http://localhost:4000/signup",inputField);
+                // let response = await axios.post("https://fineskills.herokuapp.com/signup",inputField);
                 // let response = await axios(options);
                 // console.log(response);
             }

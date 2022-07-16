@@ -15,7 +15,7 @@ function App() {
           <Route path="/profile" element={<ProfileHOC />} />
           <Route path="/contact" element={<ContactHOC />} />
           <Route path="/login" element={<LoginPage />} />
-          <Route path="/registration" element={<RegistrationPage />} />
+          <Route path="/signup" element={<RegistrationPage />} />
       </Routes>
     </>
   );

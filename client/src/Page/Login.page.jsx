@@ -105,7 +105,7 @@ const LoginPage = ()=>{
                 </div>
                 <div className="bg-yellow-200 rounded-r-sm text-black border-2 border-black flex ">
                     <button type="submit" className="bg-red-500 mx-3 my-1 px-3 py-1 w-full text-black cursor-pointer rounded-md" onClick={submitbutton}> Login</button>
-                    <NavLink to="/registration" className="bg-red-500 mx-3 my-1 px-3 py-1 w-full text-black cursor-pointer rounded-md"><button type="submit" id="addUserBtn" >Add User</button></NavLink>
+                    <NavLink to="/signup" className="bg-red-500 mx-3 my-1 px-3 py-1 w-full text-black cursor-pointer rounded-md"><button type="submit" id="addUserBtn" >Add User</button></NavLink>
                 </div>
             </div>
             </div>

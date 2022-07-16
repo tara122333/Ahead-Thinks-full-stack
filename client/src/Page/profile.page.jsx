@@ -11,15 +11,15 @@ const ProfilePage = ()=>{
         // console.log("yess home page",localStorage.getItem('token'));
 
         const fun = async() => {
-            // console.log(localStorage.getItem('token'));
-            // let url = 'https://fineskills.herokuapp.com/list';
-            // let options = {
-            //     method:'GET',
-            //     url:url,
-            //     Headers:{
-            //         'Authorization' : `Bearer ${localStorage.getItem('token')}`
-            //     }
-            // }
+            console.log(localStorage.getItem('token'));
+            let url = 'https://fineskills.herokuapp.com/list';
+            let options = {
+                method:'GET',
+                url:url,
+                Headers:{
+                    'Authorization' : `Bearer ${localStorage.getItem('token')}`
+                }
+            }
             try {
                 const localToken = localStorage.getItem('token');
                 // let response = await axios(options);
