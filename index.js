@@ -7,8 +7,6 @@ const cors = require("cors");
 
 const PORT = process.env.PORT || 4000;
 
-const HOST = 'localhost';
-
 
 const app = express();
 
@@ -27,10 +25,12 @@ app.post("/login",async(req,res)=>{
     try {
         const usermail = req.body.usermail;
         const userpassword = req.body.userpassword;
+        if(!usermail || !userpassword){
+            res.status(400).json({message : "please fill the email and password"});
+        }
         const checkEmail = await UserModel.findOne({usermail});
         if(checkEmail){
             const checkPassword =  await bcrypt.compare(userpassword,checkEmail.userpassword);
-            console.log(checkPassword);
             if(checkPassword){
                 const token = await checkEmail.generateAuthToken();
                 return res.status(200).json({token : token});
@@ -68,7 +68,6 @@ app.post("/signup",async(req,res)=>{
         console.log(chekMail);
         
         if(!chekMail){
-            console.log("user not found");
             if(userpassword===userconfirmpassword){
                 console.log("password is same");
                 const userForm = new UserModel({
@@ -79,12 +78,13 @@ app.post("/signup",async(req,res)=>{
                     userconfirmpassword : req.body.userconfirmpassword,
 
                 });
+
                 console.log("schema is created");
                 const token = await userForm.generateAuthToken();
                 const user = await userForm.save();
                 console.log(token);
                 console.log(user);
-                return res.status(200).json({
+                return res.status(201).json({
                         user,token
                 });
             }
@@ -93,7 +93,7 @@ app.post("/signup",async(req,res)=>{
             }
         }
         else{
-            return res.status(404).json({error : "user already exist"});
+            return res.status(422).json({error : "user already exist"});
         }
     } catch (error) {
         return res.status(500).json({message : "catched error message"});
@@ -111,9 +111,9 @@ if(process.env.NODE_ENV == 'production'){
     });
 }
 
-app.listen(PORT,HOST,(error)=>{
+app.listen(PORT,(error)=>{
     if(!error){
-        console.log("server has been started on port "+ PORT +  "and host is : "+HOST );
+        console.log("server has been started on port 4000" );
     }
     else{
         console.log("error is "+ error);

@@ -27,6 +27,7 @@ const RegistrationPage = ()=>{
     const inputHandeler = (e)=>{
         setInputFields({...inputField,[e.target.name]:e.target.value});
     }
+    const PORT = process.env.PORT || 4000;
 
     const submitbutton = async()=>{
         setErrorFields({
@@ -38,7 +39,7 @@ const RegistrationPage = ()=>{
         })
         if(validForm()){
 
-            let url = 'http://localhost:4000/signup';
+            let url = `http://localhost:${PORT}/signup`;
             let options = {
                 method:'post',
                 url:url,
@@ -51,7 +52,7 @@ const RegistrationPage = ()=>{
                 let response = await axios.post("http://localhost:4000/signup",inputField);
                 // let response = await axios(options);
                 console.log(response);
-                if(response.status===200){
+                if(response.status === 201 || response.status === 200 ){
                     toast.success("user added");
                     setTimeout(() => {
                         navigate("/login");
@@ -60,9 +61,10 @@ const RegistrationPage = ()=>{
                 
             } catch (e) {
                 toast.error("user not added");
-                let response = await axios.post("http://localhost:4000/signup",inputField);
+                console.log(e);
+                // let response = await axios.post("http://localhost:4000/signup",inputField);
                 // let response = await axios(options);
-                console.log(response);
+                // console.log(response);
             }
             
         }
