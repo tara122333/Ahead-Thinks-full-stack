@@ -77,7 +77,7 @@ const Poster = ()=>{
                                 </h3>
                             </div>
                             <div className="flex justify-center items-center w-full h-8">
-                                <button className="w-full h-full bg-white text-tara-0 text-sm px-3 py-1 rounded-sm border-2 hover:bg-tara-0 border-black font-bold hover:text-white"><a href={isValid ? props.link : 'https://fineskills.herokuapp.com/login' } target="_blank" rel="fnfd" className="w-full h-full">GET COURSE</a></button>
+                                <button className="w-full h-full bg-white text-tara-0 text-sm px-3 py-1 rounded-sm border-2 hover:bg-tara-0 border-black font-bold hover:text-white"><a href={isValid ? props.link : "/login" } target="_blank" rel="fnfd" className="w-full h-full">GET COURSE</a></button>
                             </div>
                             <div className="flex justify-center items-center w-full h-8 my-2 gap-4">
                                 <h3 className=" text-tara-0 px-3 py-1 text-sm rounded-sm h-full border-2 border-black font-bold w-full text-center">{props.company}</h3>
