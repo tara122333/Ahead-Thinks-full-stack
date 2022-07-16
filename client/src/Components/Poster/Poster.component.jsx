@@ -49,8 +49,9 @@ const Poster = ()=>{
     // },[])
     let isValid = false;
         const validOrNotUser = ()=>{
-            const token = localStorage.getItem('token');
-            if(token){
+            const usertoken = localStorage.getItem('token');
+            console.log(usertoken);
+            if(usertoken){
                 isValid = true;
             }
         }
