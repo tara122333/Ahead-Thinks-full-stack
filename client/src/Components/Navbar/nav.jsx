@@ -69,12 +69,15 @@ const NavLg = ()=>{
                 
             </div>
         </div> 
-        <div className="flex justify-center items-center w-full py-4 ">
-            <div className="flex items-center w-2/5 h-full rounded-sm bg-white border-2 border-white hover:border-tara-0">
-                <div className="flex bg-tara-0 h-full justify-center items-center w-16">
-                    <BiSearch className="text-center justify-center items-center text-sm font-bold cursor-not-allowed text-white h-full w-7"/>
+        <div className="flex justify-center items-center w-full my-4 h-full">
+            <div className="flex items-center w-2/5 h-full rounded-sm bg-white">
+                <div className="flex bg-tara-0 h-full justify-center items-center w-16 cursor-not-allowed">
+                    <BiSearch className="text-center justify-center items-center font-bold  text-white h-full w-7"/>
                 </div>
-                <input type="search" placeholder="Explore" className="w-full px-3 py-2 bg-transparent focus:outline-none text-black font-bold"/>
+                <div className="w-full border border-white hover:border hover:border-tara-0">
+                    <input type="search" placeholder="Explore" className="w-full px-3 py-2 bg-transparent focus:outline-none text-black font-bold"/>
+
+                </div>
             </div>      
         </div>
         </div>

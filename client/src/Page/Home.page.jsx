@@ -42,15 +42,11 @@ const HomePage = ()=>{
     // },[])
     return(
         <>
-            <div className="container mx-auto w-full px-4 py-4 flex justify-center items-center">
-                <div className="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-3 lg:grid-cols-4 lg:gap-6 ">
+            <div className="container mx-auto w-full px-4 py-4 flex justify-center items-center  relative">
+                <div className="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-8 lg:grid-cols-4 lg:gap-12 ">
                     <Poster limit={50}>
 
                     </Poster>
-                </div>
-
-                <div id="tara">
-
                 </div>
             </div>
         </>

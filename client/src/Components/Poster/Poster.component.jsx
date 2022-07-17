@@ -61,8 +61,8 @@ const Poster = ()=>{
         <>
             {// eslint-disable-next-line
                 CourseDetails.map((props)=>(
-                    <div className="w-full h-full flex rounded-lg shadow-lg lg:hover:shadow-2xl lg:w-72 md:flex-col bg-white">
-                        <div className="w-96 h-full md:w-full md:h-60 lg:h-72">
+                    <div className="w-full h-full flex rounded-lg shadow-xl lg:hover:shadow-2xl lg:w-72 md:flex-col bg-white">
+                        <div className="w-96 h-full md:w-full md:h-40 lg:h-48">
                             <img src={props.src} alt="posterimage" className="w-full h-full lg:rounded-t-lg"/>
                         </div>
                         <div className="px-2 w-full py-2 gap-1">

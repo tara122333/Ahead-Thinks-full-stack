@@ -9,10 +9,12 @@ const HomeLayout = (props)=>{
         <>
             <DefaultLayout />
             <HeroCarousel />
-            <HomePage />
+            <HomePage/>
             <div>
                 <FooterLayout />
             </div>
+            
+            
             
 
             {props.children}

@@ -5,7 +5,7 @@ import {AiFillTwitterCircle} from 'react-icons/ai';
 const FooterLayout = (props)=>{
     return(
         <>
-            <div className="flex flex-col gap-4 mt-6  md:w-full bottom-0 sticky" style={{backgroundColor:"#8E9CCD"}}>
+            <div className="flex flex-col gap-4 mt-6  md:w-full sticky" style={{backgroundColor:"#8E9CCD"}}>
                 <div className="flex justify-between gap-3 my-3 w-full lg:gap-5">
                     {/* top */}
                     <div className="flex flex-col text-white mx-3">
