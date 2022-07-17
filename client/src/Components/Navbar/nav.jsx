@@ -46,7 +46,8 @@ const NavLg = ()=>{
 
     return(
         <>
-        <div className="w-full px-3 bg-tara-0 text-white">
+        <div className="flex flex-col w-full gap-2">
+        <div className="w-full px-3 bg-tara-0 text-white shadow-2xl">
             <div className="flex justify-between gap-3 py-2 px-5 items-center">
                 <NavLink to="/">
                 <div className="flex items-center gap-1 cursor-pointer">
@@ -68,6 +69,15 @@ const NavLg = ()=>{
                 
             </div>
         </div> 
+        <div className="flex justify-center items-center w-full py-4 ">
+            <div className="flex items-center w-2/5 h-full rounded-sm bg-white border-2 border-white hover:border-tara-0">
+                <div className="flex bg-tara-0 h-full justify-center items-center w-16">
+                    <BiSearch className="text-center justify-center items-center text-sm font-bold cursor-not-allowed text-white h-full w-7"/>
+                </div>
+                <input type="search" placeholder="Explore" className="w-full px-3 py-2 bg-transparent focus:outline-none text-black font-bold"/>
+            </div>      
+        </div>
+        </div>
         </>
     );
 };

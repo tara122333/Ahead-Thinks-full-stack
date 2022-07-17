@@ -48,6 +48,10 @@ const HomePage = ()=>{
 
                     </Poster>
                 </div>
+
+                <div id="tara">
+
+                </div>
             </div>
         </>
     );

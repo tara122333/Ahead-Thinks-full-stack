@@ -23,7 +23,7 @@ const HeroCarousel = ()=>{
             dots: true,
             autoplay: true,
             centerMode:true,
-            centerPadding:"250px",
+            centerPadding:"290px",
             infinite: true,
             speed: 500,
             slidesToShow: 1,
@@ -57,8 +57,8 @@ const HeroCarousel = ()=>{
                 <HeroSlide {...settingsLG}>
                     {
                         HeroImages.map((image)=>(
-                            <div className="w-full h-96 px-14 my-3">
-                                <img src={image} alt="hero images" className="w-full h-full rounded-xl"/>
+                            <div className="w-full h-80 my-3 outline-none px-4">
+                                <img src={image} alt="hero images" className="w-full h-full rounded-xl outline-none"/>
                             </div>
                         ))
                     }
