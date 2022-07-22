@@ -7,5 +7,5 @@ mongoose.connect("mongodb+srv://tara_fine_skills:Tara1181@fineskills.3y4dtrm.mon
 }).then(()=>{
     console.log("database has been connected success bros and sis.........");
 }).catch(()=>{
-    console.log("database not connet and error is "+ error);
+    console.log("database not connot and error is "+ error);
 })
